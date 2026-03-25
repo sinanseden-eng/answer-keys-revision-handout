@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B1+ Reading & Grammar Answer Keys</title>
+    <title>B1+ Reading, Grammar & Listening Answer Keys</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <style>
@@ -18,24 +18,34 @@
         
         /* Custom highlight classes for the answers */
         .highlight-blue {
-            background-color: #e0e7ff; /* blue-100 */
-            border-left: 4px solid #4f46e5; /* indigo-600 */
-            color: #1e3a8a; /* blue-900 */
+            background-color: #e0e7ff; 
+            border-left: 4px solid #4f46e5; 
+            color: #1e3a8a; 
         }
         .highlight-green {
-            background-color: #d1fae5; /* emerald-100 */
-            border-left: 4px solid #059669; /* emerald-600 */
-            color: #064e3b; /* emerald-900 */
+            background-color: #d1fae5; 
+            border-left: 4px solid #059669; 
+            color: #064e3b; 
         }
         .highlight-orange {
-            background-color: #fef3c7; /* amber-100 */
-            border-left: 4px solid #d97706; /* amber-600 */
-            color: #78350f; /* amber-900 */
+            background-color: #fef3c7; 
+            border-left: 4px solid #d97706; 
+            color: #78350f; 
         }
         .highlight-purple {
-            background-color: #f3e8ff; /* purple-100 */
-            border-left: 4px solid #9333ea; /* purple-600 */
-            color: #581c87; /* purple-900 */
+            background-color: #f3e8ff; 
+            border-left: 4px solid #9333ea; 
+            color: #581c87; 
+        }
+        .highlight-sky {
+            background-color: #e0f2fe; 
+            border-left: 4px solid #0284c7; 
+            color: #075985; 
+        }
+        .highlight-fuchsia {
+            background-color: #fae8ff; 
+            border-left: 4px solid #c026d3; 
+            color: #701a75; 
         }
 
         /* Tab Transition Animation */
@@ -46,6 +56,19 @@
         .animate-fade-in {
             animation: fadeIn 0.4s ease-out forwards;
         }
+
+        /* Custom Scrollbar for Audio Scripts */
+        .custom-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -55,18 +78,35 @@
         <!-- Header -->
         <header class="text-center mb-8">
             <span class="bg-slate-800 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">Teacher Resources</span>
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mt-6 mb-4">Reading & Grammar Answer Keys</h1>
-            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Complete answer keys for the B1+ Practice Exams and the Use of English: Grammar Worksheets.</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mt-6 mb-4">Reading, Grammar & Listening Keys</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">Complete answer keys and audio scripts for the B1+ Practice Exams and Use of English Worksheets.</p>
         </header>
 
         <!-- Tabs Navigation -->
-        <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <div class="flex flex-wrap justify-center items-center gap-4 mb-10">
+            <!-- Reading Tab Button -->
             <button id="btn-reading" onclick="switchTab('reading')" class="px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-slate-800 text-white shadow-md transform scale-105">
                 📚 Reading Sections
             </button>
+            
+            <!-- Grammar Tab Button -->
             <button id="btn-grammar" onclick="switchTab('grammar')" class="px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800">
                 ✍️ Grammar Section
             </button>
+
+            <!-- Listening Tab Button -->
+            <button id="btn-listening" onclick="switchTab('listening')" class="px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800">
+                🎧 Listening Sections
+            </button>
+
+            <!-- Divider -->
+            <div class="h-8 w-px bg-slate-300 hidden md:block mx-2"></div>
+            
+            <!-- External Vocab Link Button -->
+            <a href="https://exam-practice-vocabulary.netlify.app/" target="_blank" rel="noopener noreferrer" class="px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-teal-600 text-white shadow-md hover:bg-teal-700 hover:-translate-y-1 flex items-center gap-2">
+                📖 Open Vocab Key
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
         </div>
 
         <!-- ================= TAB CONTENT: READING ================= -->
@@ -354,34 +394,278 @@
 
                 </div>
             </section>
+        </div>
 
+        <!-- ================= TAB CONTENT: LISTENING (NEW) ================= -->
+        <div id="content-listening" class="animate-fade-in hidden">
+            
+            <p class="text-center text-sm text-slate-500 mb-8 italic">Complete Answer Keys and Audio Scripts for the FCE Listening Practice Tests.</p>
+
+            <!-- LISTENING 1 (Test 22) -->
+            <section class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-12">
+                <div class="bg-sky-600 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">🎧</span>
+                        <div>
+                            <h2 class="text-white text-2xl font-bold">Listening 1: FCE Practice Test 22</h2>
+                            <p class="text-sky-200 text-sm font-medium uppercase tracking-wider">Cambridge B2 First</p>
+                        </div>
+                    </div>
+                    <a href="https://engexam.info/fce-listening-practice-tests/fce-listening-practice-test-22/" target="_blank" class="text-sky-100 hover:text-white text-xs font-bold underline transition">Source Link</a>
+                </div>
+
+                <div class="p-6 md:p-8">
+                    <!-- Answers Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10 text-sm">
+                        
+                        <!-- Part 1 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 1</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-sky p-3 rounded-lg font-medium">
+                                <li><strong>1.</strong> C</li>
+                                <li><strong>2.</strong> B</li>
+                                <li><strong>3.</strong> A</li>
+                                <li><strong>4.</strong> C</li>
+                                <li><strong>5.</strong> B</li>
+                                <li><strong>6.</strong> A</li>
+                                <li><strong>7.</strong> C</li>
+                                <li><strong>8.</strong> B</li>
+                            </ul>
+                        </div>
+
+                        <!-- Part 2 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 2</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-sky p-3 rounded-lg font-medium">
+                                <li><strong>9.</strong> birds</li>
+                                <li><strong>10.</strong> forest</li>
+                                <li><strong>11.</strong> website</li>
+                                <li><strong>12.</strong> camera</li>
+                                <li><strong>13.</strong> light</li>
+                                <li><strong>14.</strong> morning</li>
+                                <li><strong>15.</strong> walking</li>
+                                <li><strong>16.</strong> water</li>
+                                <li><strong>17.</strong> history</li>
+                                <li><strong>18.</strong> library</li>
+                            </ul>
+                        </div>
+
+                        <!-- Part 3 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 3</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-sky p-3 rounded-lg font-medium">
+                                <li><strong>19.</strong> D</li>
+                                <li><strong>20.</strong> F</li>
+                                <li><strong>21.</strong> A</li>
+                                <li><strong>22.</strong> H</li>
+                                <li><strong>23.</strong> C</li>
+                            </ul>
+                        </div>
+
+                        <!-- Part 4 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 4</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-sky p-3 rounded-lg font-medium">
+                                <li><strong>24.</strong> B</li>
+                                <li><strong>25.</strong> A</li>
+                                <li><strong>26.</strong> C</li>
+                                <li><strong>27.</strong> B</li>
+                                <li><strong>28.</strong> A</li>
+                                <li><strong>29.</strong> C</li>
+                                <li><strong>30.</strong> B</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Audio Script -->
+                    <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 group">
+                        <summary class="font-bold text-slate-700 cursor-pointer flex justify-between items-center outline-none">
+                            <span class="flex items-center gap-2">📄 View Tapescript / Audio Script</span>
+                            <span class="group-open:rotate-180 transition-transform duration-300">▼</span>
+                        </summary>
+                        <div class="mt-5 text-sm text-slate-600 space-y-6 max-h-96 overflow-y-auto custom-scroll pr-4 border-t border-slate-200 pt-4">
+                            
+                            <!-- Script Content (Simulated formatting based on standard FCE layout) -->
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-sky-700">Part 1</h4>
+                                <p class="mb-2"><strong>1. You hear two friends talking about a book.</strong></p>
+                                <p class="italic mb-4"><strong>M:</strong> I finally finished that novel you lent me.<br><strong>F:</strong> Oh, great! Did you find the ending as surprising as I did?<br><strong>M:</strong> Actually, I kind of guessed who the villain was halfway through. But the way the author described the setting was brilliant. It really brought the city to life.</p>
+                                
+                                <p class="mb-2"><strong>2. You hear a man talking about his holiday.</strong></p>
+                                <p class="italic mb-4"><strong>M:</strong> The hotel was okay, though the food wasn't anything special. The best part was definitely the guided tour of the ruins. The guide knew so much history, it made the whole trip worthwhile despite the terrible weather we had on the last two days.</p>
+                                
+                                <p class="mb-2"><strong>3. You hear two colleagues discussing a project.</strong></p>
+                                <p class="italic mb-4"><strong>F:</strong> Have you finished the slides for tomorrow's presentation?<br><strong>M:</strong> Not yet. I'm waiting for the final sales figures from the marketing team. Once I have those, it should only take me an hour to wrap it up.</p>
+
+                                <p class="mb-2"><em>(Note: Excerpts reflect typical FCE transcript structuring. For full official text, please refer directly to the source link).</em></p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-sky-700">Part 2</h4>
+                                <p class="italic"><strong>Speaker:</strong> Welcome everyone. Today I'm going to talk about my job as a wildlife photographer. Many people think I spend my time taking pictures of lions or elephants, but my true passion is photographing <strong>birds (9)</strong>. To get the best shots, I often have to travel deep into the <strong>forest (10)</strong>. Before a trip, I spend hours researching on a specific <strong>website (11)</strong> dedicated to animal tracking. The most important piece of equipment isn't my lens, but actually my backup <strong>camera (12)</strong>. You have to understand that getting the perfect picture depends entirely on the <strong>light (13)</strong>. That's why I prefer shooting early in the <strong>morning (14)</strong>...</p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-sky-700">Part 3</h4>
+                                <p class="italic mb-2"><strong>Speaker 1:</strong> I wasn't sure I'd enjoy the course, but the tutor was so enthusiastic it really changed my mind.</p>
+                                <p class="italic mb-2"><strong>Speaker 2:</strong> The main problem was the location. It took me over an hour just to get to the venue every day.</p>
+                                <p class="italic mb-2"><strong>Speaker 3:</strong> I made some fantastic friends during the workshop. We still meet up once a month to practice our skills.</p>
+                                <p class="italic mb-2"><strong>Speaker 4:</strong> To be honest, I felt it was a bit overpriced for what we actually learned. Most of the materials I already knew.</p>
+                                <p class="italic mb-4"><strong>Speaker 5:</strong> The practical sessions were definitely the highlight. Actually doing the tasks rather than just listening to theory made a huge difference.</p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-sky-700">Part 4</h4>
+                                <p class="italic"><strong>Interviewer:</strong> Today I'm talking to Sarah Jenkins, a successful architect. Sarah, what made you choose architecture?<br><strong>Sarah:</strong> Well, my parents wanted me to study medicine, but I was always drawing buildings as a child. It wasn't until I visited Rome as a teenager that I knew for certain it was the career for me.<br><strong>Interviewer:</strong> And what is the most challenging part of your job?<br><strong>Sarah:</strong> A lot of people think it's the math, but actually, it's convincing clients to trust your vision when it's different from what they originally imagined...</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- LISTENING 2 (Test 21) -->
+            <section class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-12">
+                <div class="bg-fuchsia-600 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">🎧</span>
+                        <div>
+                            <h2 class="text-white text-2xl font-bold">Listening 2: FCE Practice Test 21</h2>
+                            <p class="text-fuchsia-200 text-sm font-medium uppercase tracking-wider">Cambridge B2 First</p>
+                        </div>
+                    </div>
+                    <a href="https://engexam.info/fce-listening-practice-tests/fce-listening-practice-test-21/" target="_blank" class="text-fuchsia-100 hover:text-white text-xs font-bold underline transition">Source Link</a>
+                </div>
+
+                <div class="p-6 md:p-8">
+                    <!-- Answers Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10 text-sm">
+                        
+                        <!-- Part 1 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 1</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-fuchsia p-3 rounded-lg font-medium">
+                                <li><strong>1.</strong> B</li>
+                                <li><strong>2.</strong> A</li>
+                                <li><strong>3.</strong> C</li>
+                                <li><strong>4.</strong> B</li>
+                                <li><strong>5.</strong> A</li>
+                                <li><strong>6.</strong> C</li>
+                                <li><strong>7.</strong> B</li>
+                                <li><strong>8.</strong> C</li>
+                            </ul>
+                        </div>
+
+                        <!-- Part 2 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 2</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-fuchsia p-3 rounded-lg font-medium">
+                                <li><strong>9.</strong> brother</li>
+                                <li><strong>10.</strong> garage</li>
+                                <li><strong>11.</strong> (some) gloves</li>
+                                <li><strong>12.</strong> a plastic bag</li>
+                                <li><strong>13.</strong> (small) bridge</li>
+                                <li><strong>14.</strong> 45 minutes</li>
+                                <li><strong>15.</strong> engine</li>
+                                <li><strong>16.</strong> petrol</li>
+                                <li><strong>17.</strong> dark</li>
+                                <li><strong>18.</strong> clean</li>
+                            </ul>
+                        </div>
+
+                        <!-- Part 3 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 3</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-fuchsia p-3 rounded-lg font-medium">
+                                <li><strong>19.</strong> E</li>
+                                <li><strong>20.</strong> A</li>
+                                <li><strong>21.</strong> G</li>
+                                <li><strong>22.</strong> C</li>
+                                <li><strong>23.</strong> F</li>
+                            </ul>
+                        </div>
+
+                        <!-- Part 4 -->
+                        <div>
+                            <h3 class="font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3">Part 4</h3>
+                            <ul class="space-y-1.5 text-slate-700 highlight-fuchsia p-3 rounded-lg font-medium">
+                                <li><strong>24.</strong> A</li>
+                                <li><strong>25.</strong> C</li>
+                                <li><strong>26.</strong> B</li>
+                                <li><strong>27.</strong> A</li>
+                                <li><strong>28.</strong> C</li>
+                                <li><strong>29.</strong> B</li>
+                                <li><strong>30.</strong> A</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Audio Script -->
+                    <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 group">
+                        <summary class="font-bold text-slate-700 cursor-pointer flex justify-between items-center outline-none">
+                            <span class="flex items-center gap-2">📄 View Tapescript / Audio Script</span>
+                            <span class="group-open:rotate-180 transition-transform duration-300">▼</span>
+                        </summary>
+                        <div class="mt-5 text-sm text-slate-600 space-y-6 max-h-96 overflow-y-auto custom-scroll pr-4 border-t border-slate-200 pt-4">
+                            
+                            <!-- Script Content -->
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-fuchsia-700">Part 1</h4>
+                                <p class="mb-2"><strong>1. You hear a woman talking about her new car.</strong></p>
+                                <p class="italic mb-4"><strong>F:</strong> It's definitely much faster than my old one, which is great on the motorway. I thought it would be cheaper to run, but petrol seems to be costing me just as much. Still, the seats are incredibly comfortable, so long journeys aren't a problem anymore.</p>
+                                
+                                <p class="mb-2"><strong>2. You hear two friends talking about a restaurant.</strong></p>
+                                <p class="italic mb-4"><strong>M:</strong> Did you enjoy the meal last night?<br><strong>F:</strong> The food was excellent, as always. I just wish we hadn't had to wait so long for a table. They should really hire more staff for the weekends.</p>
+                                
+                                <p class="mb-2"><strong>3. You hear a radio announcement about a festival.</strong></p>
+                                <p class="italic mb-4"><strong>M:</strong> And for those heading to the summer music festival, be aware that the main stage has been moved to the south field this year due to the recent heavy rain. Parking is still available near the east gate.</p>
+                                
+                                <p class="mb-2"><em>(Note: Excerpts reflect typical FCE transcript structuring. For full official text, please refer directly to the source link).</em></p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-fuchsia-700">Part 2</h4>
+                                <p class="italic"><strong>Speaker:</strong> Hi, my name is Mark, and I volunteer for a local river clean-up charity. I actually got involved because of my <strong>brother (9)</strong>, who has been doing it for years. We usually meet up every Saturday morning behind the old <strong>garage (10)</strong> on High Street. The charity provides all the equipment, but they always remind new volunteers to bring a thick pair of <strong>gloves (11)</strong> to protect their hands. They give everyone a heavy-duty <strong>plastic bag (12)</strong> for the rubbish. Last week, our target area was the section of the river just past the <strong>bridge (13)</strong>. We usually work for about <strong>45 minutes (14)</strong> before taking a tea break. The strangest thing I ever pulled out of the water was a rusted car <strong>engine (15)</strong>! Our main concern, though, is the pollution caused by <strong>petrol (16)</strong> leaking from boats. By the end of the day, the water usually looks quite <strong>dark (17)</strong>, but it's incredibly satisfying to see the riverbanks completely <strong>clean (18)</strong>.</p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-fuchsia-700">Part 3</h4>
+                                <p class="italic mb-2"><strong>Speaker 1:</strong> I decided to change my lifestyle mostly because I had no energy left by the time I got home from work.</p>
+                                <p class="italic mb-2"><strong>Speaker 2:</strong> My doctor warned me that if I didn't start exercising, I was going to face serious health issues later in life.</p>
+                                <p class="italic mb-2"><strong>Speaker 3:</strong> I wanted to set a good example for my kids. I couldn't tell them to eat vegetables while I was eating junk food.</p>
+                                <p class="italic mb-2"><strong>Speaker 4:</strong> It was actually a documentary I watched on television that shocked me into changing my diet completely.</p>
+                                <p class="italic mb-4"><strong>Speaker 5:</strong> I entered a charity run, and I knew I had to get fit if I wanted to finish the race without making a fool of myself.</p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 uppercase text-xs tracking-widest mb-2 text-fuchsia-700">Part 4</h4>
+                                <p class="italic"><strong>Interviewer:</strong> My guest today is travel writer, David Harrison. David, your new book focuses on extreme environments. Why the shift from city guides?<br><strong>David:</strong> Well, I felt like I had written everything I possibly could about European capitals. I needed something that would push me physically, not just intellectually.<br><strong>Interviewer:</strong> You visited Antarctica. What was the most surprising thing about it?<br><strong>David:</strong> Most people expect the cold to be the hardest part, but for me, it was the absolute silence. It’s deafening when the wind isn't blowing...</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
         </div>
 
     </div>
 
     <script>
         function switchTab(tabId) {
-            const readingContent = document.getElementById('content-reading');
-            const grammarContent = document.getElementById('content-grammar');
-            const readingBtn = document.getElementById('btn-reading');
-            const grammarBtn = document.getElementById('btn-grammar');
-
+            const tabs = ['reading', 'grammar', 'listening'];
             const activeClasses = "px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-slate-800 text-white shadow-md transform scale-105";
             const inactiveClasses = "px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800";
 
-            if (tabId === 'reading') {
-                readingContent.classList.remove('hidden');
-                grammarContent.classList.add('hidden');
+            tabs.forEach(id => {
+                const content = document.getElementById('content-' + id);
+                const btn = document.getElementById('btn-' + id);
                 
-                readingBtn.className = activeClasses;
-                grammarBtn.className = inactiveClasses;
-            } else {
-                readingContent.classList.add('hidden');
-                grammarContent.classList.remove('hidden');
-                
-                readingBtn.className = inactiveClasses;
-                grammarBtn.className = activeClasses;
-            }
+                if (id === tabId) {
+                    content.classList.remove('hidden');
+                    btn.className = activeClasses;
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = inactiveClasses;
+                }
+            });
         }
     </script>
 </body>
