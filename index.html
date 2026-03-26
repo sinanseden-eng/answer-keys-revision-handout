@@ -59,6 +59,12 @@
             <p class="text-lg text-slate-600 max-w-2xl mx-auto">Reading, Grammar, Listening, and Speaking resources for the B1+ Practice Exams.</p>
         </header>
 
+        <!-- New Indicator Banner -->
+        <div class="max-w-2xl mx-auto mb-8 bg-rose-50 border border-rose-200 text-rose-700 px-4 py-3 rounded-xl shadow-sm text-center text-sm font-medium flex items-center justify-center gap-2 transition-all hover:bg-rose-100 cursor-pointer" onclick="switchTab('speaking')">
+            <span class="animate-pulse text-lg">💡</span>
+            <span><strong>Exam Prep:</strong> Make sure to check the <span class="underline font-bold">Speaking</span> tab for 60-second, color-coded B1+ sample answers!</span>
+        </div>
+
         <!-- Tabs Navigation -->
         <div class="flex flex-wrap justify-center items-center gap-3 mb-10">
             <!-- Reading Tab Button -->
@@ -77,8 +83,12 @@
             </button>
 
             <!-- Speaking Tab Button (NEW) -->
-            <button id="btn-speaking" onclick="switchTab('speaking')" class="px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800">
+            <button id="btn-speaking" onclick="switchTab('speaking')" class="relative px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800">
                 🗣️ Speaking
+                <span class="absolute -top-1 -right-1 flex h-4 w-4">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-4 w-4 bg-rose-500 shadow-sm border border-white"></span>
+                </span>
             </button>
 
             <!-- Writing Tab Button (NEW) -->
