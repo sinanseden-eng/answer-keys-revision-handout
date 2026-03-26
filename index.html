@@ -81,6 +81,11 @@
                 🗣️ Speaking
             </button>
 
+            <!-- Writing Tab Button (NEW) -->
+            <button id="btn-writing" onclick="switchTab('writing')" class="px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800">
+                📝 Essay Writing
+            </button>
+
             <!-- Divider -->
             <div class="h-8 w-px bg-slate-300 hidden lg:block mx-2"></div>
             
@@ -549,27 +554,86 @@
             </section>
         </div>
 
+        <!-- ================= TAB CONTENT: WRITING (NEW) ================= -->
+        <div id="content-writing" class="animate-fade-in hidden">
+            
+            <p class="text-center text-sm text-slate-500 mb-8 italic">B1+/B2 Essay Writing Tips: A structural guide for crafting clear, persuasive, and well-organized essays.</p>
+
+            <section class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-12">
+                <div class="bg-teal-600 px-6 py-4 flex items-center gap-3">
+                    <span class="text-3xl">📝</span>
+                    <div>
+                        <h2 class="text-white text-2xl font-bold">Essay Writing Tips</h2>
+                        <p class="text-teal-200 text-sm font-medium uppercase tracking-wider">The Standard 4-Paragraph Structure</p>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-8">
+                    <!-- The Writing Toolkit -->
+                    <h3 class="font-bold text-slate-800 text-lg mb-4 border-b border-slate-200 pb-2">PART 1: The Essay Skeleton</h3>
+                    <p class="text-sm text-slate-600 mb-6">A successful exam essay needs a clear, predictable structure. Use the boxes below to guide the layout of your paragraphs.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                        <!-- Introduction -->
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                            <h4 class="text-blue-800 font-bold text-sm uppercase tracking-wider mb-2">1️⃣ The Introduction</h4>
+                            <p class="text-xs text-slate-500 italic mb-2">Sets the stage and states your opinion.</p>
+                            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li><strong>The Hook:</strong> Start with a general statement about the topic.</li>
+                                <li><strong>The Background:</strong> Briefly explain the two sides of the debate.</li>
+                                <li><strong>The Thesis Statement:</strong> Clearly state your main opinion (e.g., <em>"This essay will argue that..."</em>).</li>
+                            </ul>
+                        </div>
+
+                        <!-- Body Paragraphs -->
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg">
+                            <h4 class="text-emerald-800 font-bold text-sm uppercase tracking-wider mb-2">2️⃣ Body Paragraphs (T.E.E.L.)</h4>
+                            <p class="text-xs text-slate-500 italic mb-2">Build 2 body paragraphs using this method:</p>
+                            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li><strong>Topic Sentence:</strong> State the main idea of the paragraph.</li>
+                                <li><strong>Explanation:</strong> Explain *why* you think this is true.</li>
+                                <li><strong>Evidence/Example:</strong> Give a real-world example.</li>
+                                <li><strong>Link:</strong> A short concluding sentence that links back to your thesis.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Linking Words -->
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
+                            <h4 class="text-amber-800 font-bold text-sm uppercase tracking-wider mb-2">🔗 Essential Linking Words</h4>
+                            <p class="text-xs text-slate-500 italic mb-2">Use these at the start of your sentences:</p>
+                            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li><strong>Adding ideas:</strong> Furthermore, Moreover, In addition.</li>
+                                <li><strong>Contrasting:</strong> However, On the other hand, Nevertheless.</li>
+                                <li><strong>Showing results:</strong> Therefore, Consequently, As a result.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                            <h4 class="text-purple-800 font-bold text-sm uppercase tracking-wider mb-2">🏁 The Conclusion</h4>
+                            <p class="text-xs text-slate-500 italic mb-2">Wrap up without adding new information.</p>
+                            <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                <li><strong>Restate Thesis:</strong> State your main opinion again using *different* words.</li>
+                                <li><strong>Summarize:</strong> Briefly remind the reader of your 2 main points.</li>
+                                <li><strong>Final Thought:</strong> End with a strong statement, a warning, or a hope for the future.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pro Tips Section -->
+                    <h3 class="font-bold text-slate-800 text-lg mb-4 border-b border-slate-200 pb-2">PART 2: Exam Pro-Tips</h3>
+                    <div class="bg-slate-100 p-5 rounded-lg border border-slate-300 text-sm text-slate-700 space-y-3">
+                        <p>💡 <strong>Avoid informal language:</strong> Do not use contractions (e.g., use <em>"do not"</em> instead of <em>"don't"</em>). Avoid slang and overly emotional words.</p>
+                        <p>💡 <strong>Plan before you write:</strong> Spend the first 5 minutes of your exam writing a quick outline. Knowing your Topic Sentences before you start writing will prevent you from getting stuck.</p>
+                        <p>💡 <strong>Use a counter-argument:</strong> To get the highest marks, start your second body paragraph by acknowledging the opposite opinion before disproving it (e.g., <em>"While some people argue that [Opposite Opinion], they fail to consider that..."</em>).</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
     </div>
 
     <script>
         function switchTab(tabId) {
-            const tabs = ['reading', 'grammar', 'listening', 'speaking'];
-            const activeClasses = "px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-slate-800 text-white shadow-md transform scale-105";
-            const inactiveClasses = "px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 hover:text-slate-800";
-
-            tabs.forEach(id => {
-                const content = document.getElementById('content-' + id);
-                const btn = document.getElementById('btn-' + id);
-                
-                if (id === tabId) {
-                    content.classList.remove('hidden');
-                    btn.className = activeClasses;
-                } else {
-                    content.classList.add('hidden');
-                    btn.className = inactiveClasses;
-                }
-            });
-        }
-    </script>
-</body>
-</html>
+            const tabs = ['reading', 'grammar', 'listening', 'speaking', 'writing'];
